@@ -8,10 +8,17 @@
 
 int main(void)
 {
-	char letter;
+	int n;
+	int m;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
-		putchar(letter);
+	for (n = 48; n <= 57; n++)
+	{
+		putchar(n);
+	}
+	for (m = 97; m <= 102; m++)
+	{
+		putchar(m);
+	}
 
 	putchar('\n');
 
