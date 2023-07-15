@@ -1,4 +1,3 @@
-#include <stlib.h>
 #include <stdio.h>
 
 /**
@@ -15,6 +14,6 @@ int main(void)
 	{
 		putchar(alp[i]);
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
