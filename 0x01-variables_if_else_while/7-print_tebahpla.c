@@ -8,12 +8,13 @@
 
 int main(void)
 {
-	int num;
+	int n = 122;
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-
+	while (n >= 97)
+	{
+		putchar(n);
+		n--;
+	}
 	putchar('\n');
-
 	return (0);
 }
