@@ -1,38 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - Entry Point
+ * main - Entry point
  *
- * Return: Always 0 (success)
+ * Description: Prints all possible different combinations of three digits
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	int k = '0';
-
-	while (i <= '7')
+	int i, j, k;
+	
+	for (i = 0; i <= 7; i++)
 	{
-		while (j <= '8')
+		for (j = i + 1; j <= 8; j++)
 		{
-			while (k <= '9')
+			for (k = j + 1; k <= 9; k++)
 			{
-				if (i < j && j < k)
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				putchar((k % 10) + '0');
+				if (i != 7 || j != 8 || k != 9)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (!(i == '7' && j == '8' && k == '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
-				k++;
 			}
-			k = '0';
-			j++;
 		}
 	}
 	putchar('\n');
